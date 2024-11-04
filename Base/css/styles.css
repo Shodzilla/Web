@@ -1,0 +1,299 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ece6e6;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #ff69b4;
+  padding: 30px;
+  text-align: center;
+  border-bottom:1px solid #df2c85;
+}
+
+header div h1 {
+  color: #ffffff;
+  font-size: 2.5em;
+  font-weight: bold;
+  float: left;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-top: 10px;
+  float : right
+}
+
+nav ul li {
+  display: inline;
+  flex: right;
+  margin: 0 15px;
+
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+main {
+  flex: 1; /* Hace que el main crezca para empujar el footer hacia abajo */
+}
+
+div.imagen img{
+  padding: 0;
+  display: block;
+  
+}
+
+section.bienvenida {
+  position: absolute;
+  top:0;
+  right: 27%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+section.bienvenida h2 {
+  font-size: 2em;
+  color: #b8cc08;
+}
+
+section.bienvenida p {
+  font-size: 1.2em;
+  color: #333333;
+}
+
+section.inventario h3 {
+  font-size: 1.8em;
+  color: #ff69b4;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.grid-helados {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.helado {
+  background-color: #f0f8ff;
+  border: 1px solid #ff69b4;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.helado img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.helado h4 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #333333;
+}
+
+.helado p {
+  font-size: 1.2em;
+  color: #666666;
+}
+
+footer {
+  background-color: #ff69b4;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+.imagen{
+  position: relative;
+}
+
+.imagen img{
+  width: 50%;
+  height: 550px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.Empresa{
+  position: relative;
+  margin-top: 40px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.Empresa h2, .Empresa p{
+  margin: 25px;
+  padding: 10px;
+  width: 450px;
+  text-align: center;
+}
+
+.Empresa section{
+  border: 1px solid black;
+  width: 500px;
+  overflow: hidden;
+  position: relative;
+  top: 10%;
+  left: 10%;
+  box-shadow: 0px 0px 18px -4px rgba(0,0,0,1);
+}
+
+.Empresa img{
+  position: absolute;
+  border-radius: 5px;
+  width: 350px;
+  height: 400px;
+  right: 10%;
+  top: 0;
+
+}
+
+/* Estilos para el sistema de ventas */
+.ventas {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.ventas form {
+  display: inline-block;
+  text-align: left;
+  max-width: 500px;
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ff69b4;
+}
+
+.ventas label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+  
+.ventas input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.ventas button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.ventas button:hover {
+  background-color: #ff4081;
+}
+
+#carrito {
+  margin-top: 30px;
+}
+
+#carrito ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#carrito ul li {
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+#total {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.factura {
+  text-align: center;
+  margin: 40px 0;
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ff69b4;
+}
+
+/* Estilos personalizados */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #ff5e57;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ff5e57;
+}
+
+.empresa h2 {
+  color: #ff5e57;
+  font-weight: bold;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease;
+  
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  color: #ff5e57;
+}
+
+footer {
+  background-color: #f1f1f1;
+}
+
+footer p {
+  margin: 0;
+  color: #555;
+}
+
+.card-img-top {
+  border-radius: 15px; /* Puedes ajustar este valor a tu gusto */
+}
+
+p {
+  font-size: 26.5px;
+}

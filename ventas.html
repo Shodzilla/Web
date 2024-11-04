@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CandyCandy - Sistema de Ventas</title>
+    <link rel="stylesheet" href="./Base/css/styles.css" />
+  
+  </head>
+  <body>
+    <!-- sistema de gestion de ventas con Javascript -->
+    <header>
+      <div class="logo">
+        <h1>CandyCandy</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="principal.html">Inicio</a></li>
+          <li><a href="ventas.html">Ventas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="ventas">
+        <h2>Sistema de Ventas</h2>
+        <form id="ventasForm">
+          <div class="producto">
+            <label for="producto">Seleccione el helado:</label>
+            <select id="producto" required>
+              <option value="" disabled selected>Seleccionar helado</option>
+              <option value="chocolate" data-precio="2.50">
+                Helado de Chocolate - $2.50
+              </option>
+              <option value="vainilla" data-precio="2.00">
+                Helado de Vainilla - $2.00
+              </option>
+              <option value="fresa" data-precio="2.30">
+                Helado de Fresa - $2.30
+              </option>
+              <option value="menta" data-precio="2.40">
+                Helado de Menta - $2.40
+              </option>
+              <option value="dulce" data-precio="2.60">
+                Helado de Dulce de Leche - $2.60
+              </option>
+              <option value="mango" data-precio="2.20">
+                Helado de Mango - $2.20
+              </option>
+              <option value="frutas" data-precio="2.70">
+                Helado de Frutas Tropicales - $2.70
+              </option>
+              <option value="cafe" data-precio="2.30">
+                Helado de Café - $2.30
+              </option>
+              <option value="limon" data-precio="2.10">
+                Helado de Limón - $2.10
+              </option>
+            </select>
+          </div>
+
+          <div class="cantidad">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" min="1" required />
+          </div>
+
+          <button type="button" id="agregar">Agregar al carrito</button>
+
+          <div id="carrito">
+            <h3>Carrito de Compras</h3>
+            <ul id="listaCarrito"></ul>
+            <p>Total: $<span id="total">0.00</span></p>
+            <button type="button" id="procesarVenta">Procesar Venta</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="factura" class="factura" style="display: none">
+        <h2>Factura</h2>
+        <div id="detalleFactura">
+          <!-- Detalles de la factura generada se mostraran aquí -->
+        </div>
+        <button onclick="window.print()">Imprimir Factura</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 CandyCandy. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/Base/js/ventas.js"></script>
+  </body>
+</html>
